@@ -1,0 +1,22 @@
+---
+layout: default
+title: 目录
+---
+
+
+<h1> 文件目录 </h1>
+
+<a href="https://wakatime.com/badge/user/70908aa3-b2c6-4f44-a07f-7bd45f260e48/project/b13782aa-746e-4b99-b683-3aaa40201f2a"><img src="https://wakatime.com/badge/user/70908aa3-b2c6-4f44-a07f-7bd45f260e48/project/b13782aa-746e-4b99-b683-3aaa40201f2a.svg" alt="wakatime"></a>
+
+<p>为了防止抄袭，最新的文件在停止提交前不会显示代码.</p>
+
+<p>本页面自动生成于：{{ site.time | date: "%Y-%m-%d %H:%M:%S" }}</p>
+
+<ul>
+  {% assign files = site.static_files | where: "extname", ".html" %}
+  {% for file in files %}
+    {% if file.path contains '/web/' %}
+      <li><a href="{{ file.path | relative_url }}">{{ file.name }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
